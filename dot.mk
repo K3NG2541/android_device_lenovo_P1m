@@ -4,7 +4,7 @@
 PRODUCT_RELEASE_NAME := P1m
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/aosp/common.mk)
+$(call inherit-product, vendor/dot/config/common_full_phone.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
@@ -14,7 +14,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P1m
-PRODUCT_NAME := aosp_P1m
+PRODUCT_NAME := dot_P1m
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := Lenovo P1m
 PRODUCT_MANUFACTURER := lenovo
