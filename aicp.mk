@@ -4,7 +4,7 @@
 PRODUCT_RELEASE_NAME := P1m
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/aicp/config/common_full_phone.mk)
+$(call inherit-product, vendor/aicp/configs/common_full_tv.mk)
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
