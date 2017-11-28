@@ -34,9 +34,6 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.ril.log=0 \
     ro.disable.xlog=0
 
-# The gps config appropriate for this device
-$(call inherit-product, device/common/gps/gps_us_supl.mk)
-
 $(call inherit-product-if-exists, vendor/lenovo/P1m/P1m-vendor.mk)
 
 DEVICE_PACKAGE_OVERLAYS += device/lenovo/P1m/overlay

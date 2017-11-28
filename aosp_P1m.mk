@@ -4,7 +4,10 @@
 PRODUCT_RELEASE_NAME := P1m
 
 # Inherit some common CM stuff.
-$(call inherit-product, vendor/aoscp/config/common_full_phone.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+
+# Provide meaningful APN configuration
+PRODUCT_COPY_FILES := device/lenovo/P1m/apns-full-conf.xml:system/etc/apns-conf.xml
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
@@ -14,7 +17,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P1m
-PRODUCT_NAME := aoscp_P1m
+PRODUCT_NAME := full_P1m
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := Lenovo P1m
 PRODUCT_MANUFACTURER := lenovo
