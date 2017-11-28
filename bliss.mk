@@ -3,12 +3,11 @@
 # Release name
 PRODUCT_RELEASE_NAME := P1m
 
-# Inherit some common Lineage stuff.
-$(call inherit-product, vendor/xenonhd/config/common_full_phone.mk)
+# Inherit Bliss common Phone stuff.
+$(call inherit-product, vendor/bliss/config/common.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.xenonhd.maintainer=K3NG2541(Keng_Natan) \
-    ro.xenonhd.donate="https://www.paypal.me/nayanza"
+    ro.bliss.maintainer=K3NG2541(Keng_Natan)
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
@@ -18,7 +17,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P1m
-PRODUCT_NAME := xenonhd_P1m
+PRODUCT_NAME := bliss_P1m
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := Lenovo P1m
 PRODUCT_MANUFACTURER := lenovo
