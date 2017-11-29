@@ -3,11 +3,11 @@
 # Release name
 PRODUCT_RELEASE_NAME := P1m
 
-# Inherit some common CM stuff.
-$(call inherit-product, vendor/du/config/common_full_phone.mk)
+# Inherit some common stuff.
+$(call inherit-product, vendor/slim/config/common.mk)
 
-# Inherit from the common open source product configuration
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.slim.maintainer=K3NG2541(Keng_Natan) 
 
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
@@ -17,7 +17,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P1m
-PRODUCT_NAME := du_P1m
+PRODUCT_NAME := slim_P1m
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := Lenovo P1m
 PRODUCT_MANUFACTURER := lenovo
