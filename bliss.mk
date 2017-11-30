@@ -3,8 +3,14 @@
 # Release name
 PRODUCT_RELEASE_NAME := P1m
 
-# Inherit Bliss common Phone stuff.
+# Inherit from the common Open Source product configuration
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Inherit from our custom product configuration
 $(call inherit-product, vendor/bliss/config/common.mk)
+
+#inherit bliss telephony
+$(call inherit-product, vendor/bliss/config/telephony.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.bliss.maintainer=K3NG2541(Keng_Natan)
