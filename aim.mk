@@ -7,7 +7,8 @@ PRODUCT_RELEASE_NAME := P1m
 $(call inherit-product, vendor/aim/config/common_full_phone.mk)
 
 PRODUCT_PROPERTY_OVERRIDES += \
-    ro.aim.maintainer=z3r0c00l_2k 
+    ro.aim.maintainer="K3NG2541(Keng_Natan)
+
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
 
