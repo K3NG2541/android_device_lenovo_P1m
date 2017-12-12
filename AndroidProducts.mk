@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/aosp_P1mmk
+    $(LOCAL_DIR)/pa_P1m.mk

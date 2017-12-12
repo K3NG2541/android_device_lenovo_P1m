@@ -3,8 +3,15 @@
 # Release name
 PRODUCT_RELEASE_NAME := P1m
 
-# Inherit some common CM stuff.
-$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base.mk)
+# Check for target product
+ifeq (pa_P1m,$(TARGET_PRODUCT))
+
+# Inherit from those products. Most specific first.
+$(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
+$(call inherit-product, $(SRC_TARGET_DIR)/product/aosp_base_telephony.mk)
+
+# Paranoid Android platform
+include vendor/pa/main.mk
 
 # Provide meaningful APN configuration
 PRODUCT_COPY_FILES := device/lenovo/P1m/apns-full-conf.xml:system/etc/apns-conf.xml
@@ -17,7 +24,7 @@ TARGET_SCREEN_WIDTH := 720
 
 # Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := P1m
-PRODUCT_NAME := full_P1m
+PRODUCT_NAME := pa_P1m
 PRODUCT_BRAND := lenovo
 PRODUCT_MODEL := Lenovo P1m
 PRODUCT_MANUFACTURER := lenovo
@@ -26,3 +33,5 @@ PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 # Available languages
 PRODUCT_LOCALES := en_US en_GB ru_RU uk_UA tr_TR sk_SK vi_VN fr_FR ar_EG th_TH
+
+endif
