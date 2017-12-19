@@ -2,6 +2,10 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/languages_full.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
+# set locales & aapt config.
+PRODUCT_AAPT_CONFIG := normal xhdpi xxhdpi
+PRODUCT_AAPT_PREF_CONFIG := xhdpi
+
 # These additionals go to /default.prop
 ADDITIONAL_DEFAULT_PROPERTIES += ro.secure=0 \
 ro.allow.mock.location=1 \

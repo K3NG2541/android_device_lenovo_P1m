@@ -3,7 +3,7 @@
 
 
 # Disable NINJA
-USE_NINJA := false
+#USE_NINJA := false
 
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/lenovo/P1m/include
