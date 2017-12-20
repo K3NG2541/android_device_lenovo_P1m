@@ -9,6 +9,9 @@ $(call inherit-product, vendor/cm/config/common_full_phone.mk)
 # Inherit device configuration
 $(call inherit-product, device/lenovo/P1m/device_P1m.mk)
 
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.cm.maintainer=K3NG2541(Keng_Natan)
+
 TARGET_SCREEN_HEIGHT := 1280
 TARGET_SCREEN_WIDTH := 720
 
@@ -22,4 +25,4 @@ PRODUCT_MANUFACTURER := lenovo
 PRODUCT_GMS_CLIENTID_BASE := android-lenovo
 
 # Available languages
-PRODUCT_LOCALES := en_US en_GB ru_RU uk_UA tr_TR sk_SK vi_VN fr_FR ar_EG
+PRODUCT_LOCALES := en_US en_GB ru_RU uk_UA tr_TR sk_SK vi_VN fr_FR ar_EG th_TH

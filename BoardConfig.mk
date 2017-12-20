@@ -3,7 +3,7 @@
 
 
 # Disable NINJA
-USE_NINJA := false
+#USE_NINJA := false
 
 # GPS
 TARGET_SPECIFIC_HEADER_PATH := device/lenovo/P1m/include
@@ -162,6 +162,6 @@ BOARD_SEPOLICY_DIRS := \
        device/lenovo/P1m/sepolicy
 
 # Use old sepolicy version
-POLICYVERS := 29
+#POLICYVERS := 29
 
 TARGET_LDPRELOAD += libxlog.so:libmtk_symbols.so # for symbols in mtkaudio.cpp + mtksymbols
